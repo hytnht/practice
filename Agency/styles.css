@@ -1,0 +1,637 @@
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    transition: all .5s ease;
+}
+
+a {
+    Color: #fff;
+    text-decoration: none;
+}
+
+/* Button */
+.button {
+    font: bold 1.2rem 'Montserrat';
+    color: #fff;
+    background-color: #fed136;
+    border-radius: 0.5rem;
+    padding: 1.25rem 2.5rem;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #fec810;
+}
+
+.button:active, .button:focus {
+    background-color: #fec810;
+    box-shadow: 0 0 0 .2rem rgba(255, 255, 255, 0.25);
+}
+
+/* Text */
+h1 {
+    color: #212529;
+    font: bold 2.5rem 'Montserrat';
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+h2 {
+    color: #212529;
+    font: bold 1.5rem 'Montserrat';
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: .5rem;
+}
+
+h3, h4 {
+    color: #6c757d;
+    font: italic 1rem 'Droid Serif';
+    text-align: center; 
+}
+
+h3 {
+    margin-bottom: 4rem;
+}
+
+p {
+    color: #6c757d;
+    font: 1rem 'Roboto Slab';
+    text-align: center;
+    line-height: 1.75rem;
+}
+
+section {
+    padding: 5rem 0;
+}
+
+.flex {
+    display: flex;
+    align-items: center;    
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+header {
+    background-image: url(./img/header-bg.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    width: 100%;
+    text-align: center;
+    padding: 0 .75rem;
+    margin: auto;
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    } 
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    } 
+
+    footer .container {
+        flex-flow: row wrap;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    } 
+}
+
+/* Navigation */
+nav {
+    padding: 1.5rem;
+    background-color: #212529;
+    z-index: 1;
+}
+
+nav img {
+    height: 1.5rem;
+    margin-right: auto;
+}
+
+nav li {
+    padding: .5rem 0;
+    list-style: none;
+    font: .95rem 'Montserrat';
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: left;
+}
+
+nav li a:hover {
+    color:#fec136;
+}
+
+.menu {
+    padding: .75rem;
+    font-size: .75rem;
+    float: right;
+}
+
+.menu > i {
+    margin-left: .5rem;
+}
+
+.scroll-color {
+    color: #fec136;
+}
+
+.sticky {
+    position: fixed;
+    background-color: #212529;
+    width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.sticky img {
+    height: 1.5rem;
+}
+
+@media (max-width: 992px) {
+    ul.flex {
+        display: none;
+    }
+
+    .dropdown {
+        display: block;
+        position: fixed;
+        width: 100%;
+    }
+
+    .dropdown ul.flex {
+        display: block;
+        background-color: #212529;
+    }
+}
+
+@media (min-width: 992px) {
+    nav {
+        padding: 2rem 6rem;
+        background-color: transparent;
+    }
+
+    nav li {
+        padding: 1rem;
+    }
+
+    nav img {
+        height: 2rem;
+    }
+
+    .menu {
+        display: none;
+    }
+}
+
+/* Greetings */
+header div.flex {
+    flex-flow: column;
+    padding: 11rem 0;
+}
+
+.greeting {
+    font: italic 2.25rem 'Droid Serif';
+    color: #fff;
+    text-transform: capitalize;
+    margin-bottom: 1.5rem;
+}
+
+.subgreeting {
+    font: bold 4.5rem 'Montserrat';
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 4rem;
+}
+
+/* Services */
+.svc {
+    align-items: flex-start;
+}
+
+.svc-content {
+    flex-direction: column;
+    padding: 0 .75rem;
+}
+
+#services i {
+    color: #fff;
+    background-color: #fed136 ;
+    border-radius: 100%;
+    font-size: 4rem;        
+    width: 8rem;
+    height: 8rem;
+    line-height: 8rem;
+    text-align: center;
+    margin-bottom: 1rem;;
+}
+
+@media (min-width: 768px) {
+    .svc-content {
+        max-width: 33%;
+    }
+}
+
+/* Portfolio */
+#portfolio {
+    background-color: #f8f9fa;
+}
+
+.pfl {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(276px, 1fr));
+    gap: 1.5rem;
+    justify-content: space-evenly;  
+    margin: auto;
+}
+
+figcaption {
+	display: inline-block;
+    background-color: #fff;
+    padding: 1.5rem;
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+.pfl-img {
+	position: relative;
+	line-height: 0;
+}
+
+.pfl-img .fa-plus {
+    position: absolute;
+    display: flex;
+    max-width: 400px;
+	height: 100%;	
+    font-size: 3.75rem;
+    color: #fff;
+    background-color: #fed136e6;
+    opacity: 0;
+    align-items: center;
+    justify-content: center;
+	cursor: pointer;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+.pfl-img .fa-plus:hover {
+    opacity: 99;
+}
+
+.modal, .modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+	z-index: 10;
+}
+
+.modal-overlay {
+	display: block;
+	background-color: #212529;
+    opacity: 50%;
+}
+
+.modal-content {
+    position: relative;
+    margin: 2rem;
+    background-color: #fff;
+    border-radius: 1rem;
+	opacity: 100%;
+	z-index: 12;
+}
+
+.modal-close-x {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    width: 3rem; 
+	cursor: pointer;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 7rem 2rem;
+}
+
+.modal-body h1 {
+    font-size: 3rem;;
+}
+
+.modal-body p {
+    color: #212529;
+    max-width: 650px;
+    margin-top: 2rem;
+}
+
+.modal-close-btn {
+    background-color: #fed136;
+    color: #fff;
+    font: 1rem 'Roboto Slab';
+    border-color: #fed136;
+    border-radius: .2rem;
+    padding: .5rem 1rem;
+    margin-top: 2rem;
+	cursor: pointer;
+}
+
+.fa-times {
+    padding-right: .25rem;
+}
+
+/* About */   
+.ab-all {
+    position: relative;
+}  
+
+.ab-all:before {
+    display: block;
+    content: "";
+    width: 3px;
+    background-color: #e9ecef;
+    position: absolute;
+    top: 0; 
+    bottom: 200px;
+    left: 40px;
+}
+
+.ab-timeline {
+    position: relative;
+    margin-top: 4rem;
+    overflow: auto;
+    min-height: 200px;
+}  
+
+#about img, .ab-end {
+    display: block;
+    border: 7px solid #e9ecef;
+    border-radius: 100%;
+    position: absolute;
+    left: 40px;
+    transform: translateX(-50%);
+    display: flex;
+    background-color: #fed136;
+    color: #fff;
+    align-items: center;
+    margin: 0;
+    width: 5rem;
+    height: 5rem;
+    font-size: .8rem;
+}
+
+.ab-content {
+    display: flex;
+    flex-flow: column;
+    padding: 0 1.5rem;
+}
+
+.ab-left, .ab-right {
+    float: right;
+    padding-left: 6rem;
+}
+
+.ab-left >*, .ab-right >* {
+    text-align: left;
+}
+
+@media (min-width: 768px) {
+    #about img, .ab-end {
+        width: 6rem;
+        height: 6rem;
+        left: 50%;
+        font-size: 1rem;
+    }
+
+    .ab-all:before {
+        left: 50%;
+    }
+
+    .ab-left {
+        position: relative;
+        float: left;
+        width: 40%;
+        padding: 0;
+    }
+
+    .ab-left >* {
+        text-align: right;
+    }
+
+    .ab-right {
+        position: relative;
+        float: right;
+        width: 40%;
+        padding: 0;
+    }
+
+    .ab-right >* {
+        text-align: left;
+    }
+}
+
+@media (min-width: 992px) {  
+    #about img, .ab-end {
+        width: 8.5rem;
+        height: 8.5rem;
+        font-size: 1.5rem;
+    }  
+}
+
+/* Our Team */
+#team {
+    background-color: #f8f9fa;
+    padding-bottom: 0;
+}
+
+#team .container img {
+    display: block;
+    border: 7px solid #e9ecef;
+    border-radius: 100%;
+    width: 225px;
+}
+#team h2 {
+    margin-top: 1.5rem;
+}
+
+.tm-all {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.tm-content {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    min-width: 270px;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+.social a {
+    display: block;
+    color: #fff;
+    background-color: #343a40;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 0 .5rem;
+    border-radius: 100%;
+    line-height: 2.5rem;
+}
+
+.social a:focus {
+    box-shadow: 0 0 0 .25rem rgba(0, 0, 0, 0.25);
+}
+
+.tm-text {
+    margin: 3rem auto;
+}
+
+@media (min-width: 992px) {  
+    .tm-text {
+        width: 70%;
+    }   
+}
+
+/* Clients */
+#clients {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #fff;
+    padding: 3rem 0;    
+}
+
+#clients img {
+    margin: 0 2rem;
+}
+
+/* Contact */
+#contact {
+    background-color: #212529;
+    background-image: url(./img/map-image.png);
+    background-size: contain;
+}
+
+#contact h1 {
+    color: #fff;
+}
+
+.form {
+    display: grid;
+    grid: repeat(6, auto) / 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    grid-auto-flow: column;
+}
+
+.form > *::placeholder {
+    font: bold 1rem 'Montserrat';
+    opacity: 0.5;
+}
+
+.form > input, textarea {
+    font: 1rem 'Droid Serif';
+    border-radius: 0.5rem;
+    padding: 1.25rem;
+}
+
+#msg {
+    grid-row-start: 1;
+}
+
+.invalid {
+    display: none;
+    list-style-type: disc;
+    list-style-position: inside;
+    color: #dc3545;
+    text-align: left;
+    padding-bottom: 1rem;
+    margin-left: 1rem;
+    line-height: 0;
+}
+
+@media (max-width: 768px) {
+    .form {
+        display: flex;
+        flex-flow: column;  
+    }
+
+    #msg {
+        min-height: 12rem;
+    }
+}
+
+/* Footer */
+footer .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2rem auto;
+    flex-flow: column;
+} 
+
+footer p, .social, .terms {
+    margin: .5rem;
+    font: .9rem "Montserrat";
+}
+
+footer a {
+    color: #fed136;
+    margin: 0   1rem;
+}
+
+footer a:hover {
+    color: #e6b301 !important;
+    text-decoration: underline;
+}
+
+@media (min-width: 992px) {  
+footer .container {
+    flex-flow: row wrap;
+    }
+}
+
+
+
+
+
+
+
